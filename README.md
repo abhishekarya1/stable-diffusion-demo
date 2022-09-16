@@ -1,4 +1,4 @@
-# Stable Diffusion Demo
+# Stable Diffusion Demo 🤖 🖼️
 This repo contains info, configs, and notes for running stable diffusion locally.
 
 ## Enviroment
@@ -11,7 +11,7 @@ This repo contains info, configs, and notes for running stable diffusion locally
 - Python 3.10.0
 - Model Checkpoint: v1-4
 
-### Steps
+## Installation Steps
 1. Download weights [^1]
 2. Download any fork, I used the web-ui fork [^2]
 3. Change to `name: ldo` in environment.yaml
@@ -20,11 +20,11 @@ This repo contains info, configs, and notes for running stable diffusion locally
 6. Activate env by `conda activate ldo`
 7. Run `webui.cmd` in (ldo)
 
-NOTE: The original repo [^3] gave me a `RuntimeError: CUDA Out Of Memory` even with `--n_samples 1`. The optimized fork [^4] did generate 512x512 images but took almost 50s to generate 2 images. 
+**NOTE**: The original repo [^3] gave me a `RuntimeError: CUDA Out Of Memory` even with `--n_samples 1`. The optimized fork [^4] has all the safety_checks removed and uses less VRAM and has a faster result generation time.
 
-I didn't try the `model.half()` tip that some people have suggested to use with the original repo.
+P.S. _I didn't try the `model.half()` tip that some people have suggested to use with the original repo for low VRAM usage._
 
-### Cherrypicked Results
+## Results (cherrypicked ofc!)
 
 <div>
 <code>Prompt#1: "a cat wearing a red hat"</code>
@@ -71,7 +71,7 @@ I didn't try the `model.half()` tip that some people have suggested to use with 
 </span>
 <br>
 
-### Stats
+## Stats
 I generated images in batches of 4 at a time.
 
 Generation time ~ 40s (10s per image)
@@ -80,7 +80,7 @@ Peak memory usage: 7854 MiB / 8192 MiB / 95.871%
 
 The cyberpunk one (Prompt#4) was an outlier, it took 330.05s total (82.51s per image).
 
-### References
+## References
 [^1]: https://huggingface.co/CompVis
 [^3]: https://github.com/CompVis/stable-diffusion 
 [^4]: Optimized: https://github.com/basujindal/stable-diffusion (Worked well enough)
