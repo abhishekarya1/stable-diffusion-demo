@@ -78,7 +78,7 @@ Generation time ~ 40s (10s per image)
 
 Peak memory usage: 7854 MiB / 8192 MiB / 95.871%
 
-The cyberpunk one (Prompt#4) was an outlier, it took 330.05s total (82.51s per image).
+The steampunk one (Prompt#4) was an outlier, it took 330.05s total (82.51s per image).
 
 ## References
 [^1]: https://huggingface.co/CompVis
